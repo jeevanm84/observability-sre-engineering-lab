@@ -1,0 +1,12 @@
+groups:
+  - name: checkout-slo
+    rules:
+      - record: checkout:bad_rate:5m
+        expr: sum(rate(http_requests_total{service="checkout-api",outcome="bad"}[5m])) / sum(rate(http_requests_total{service="checkout-api"}[5m]))
+      - record: checkout:bad_rate:1h
+        expr: sum(rate(http_requests_total{service="checkout-api",outcome="bad"}[1h])) / sum(rate(http_requests_total{service="checkout-api"}[1h]))
+      - alert: CheckoutFastErrorBudgetBurn
+        expr: (checkout:bad_rate:5m / 0.001) >= 14.4 and (checkout:bad_rate:1h / 0.001) >= 14.4
+        labels: {severity: critical}
+        annotations: {runbook: docs/RUNBOOK.md}
+

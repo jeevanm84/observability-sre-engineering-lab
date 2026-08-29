@@ -1,0 +1,2 @@
+{"name":"healthy","service":"checkout-api","slo":{"availability_target":0.999,"latency_target_ms":400},"windows":[{"name":"5m","minutes":5,"valid_events":100000,"bad_events":50,"slow_events":120},{"name":"30m","minutes":30,"valid_events":600000,"bad_events":300,"slow_events":800},{"name":"1h","minutes":60,"valid_events":1200000,"bad_events":600,"slow_events":1500},{"name":"6h","minutes":360,"valid_events":7200000,"bad_events":3600,"slow_events":9000}],"expected_decision":"no-page","correlation":{"release":"checkout-2.4.0","dependency":"payments"}}
+

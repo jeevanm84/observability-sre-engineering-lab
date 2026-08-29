@@ -1,0 +1,2 @@
+{"service":"checkout-api","tier":1,"owner":"commerce-platform","runbook":"docs/RUNBOOK.md","dashboard":"checkout-overview","dependencies":["payments","inventory","orders"],"slos":[{"name":"availability","target":0.999,"window_days":30},{"name":"latency","target":0.99,"threshold_ms":400,"window_days":30}],"telemetry_labels":["service","environment","region","release","dependency"]}
+
