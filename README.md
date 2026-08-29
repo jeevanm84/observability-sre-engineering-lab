@@ -11,7 +11,7 @@ Dashboards are outputs, not the architecture. This repository begins with user o
 Teams can collect large volumes of metrics, logs, and traces yet fail to answer: Are users affected? How quickly is the budget burning? Which release or dependency changed? Should we page now?
 
 ```mermaid
-flowchart LR
+flowchart TB
   User --> Service --> Collector[OpenTelemetry collector]
   Collector --> Metrics
   Collector --> Logs
@@ -61,4 +61,3 @@ Problem → Requirements → Architecture → Implementation → Deployment → 
 [Git](https://github.com/jeevanm84/git-command-master-map) → [AWS](https://github.com/jeevanm84/aws-well-architected-production-labs) → [Terraform](https://github.com/jeevanm84/terraform-aws-ha-web-platform) → [Packer](https://github.com/jeevanm84/packer-aws-golden-image-pipeline) → [Kubernetes](https://github.com/jeevanm84/kubernetes-zero-to-production) → [CI/CD and GitOps](https://github.com/jeevanm84/cicd-gitops-platform-engineering) → **Observability and SRE** → DevSecOps → Troubleshooting → [MjCart](https://github.com/jeevanm84/mjcart-ecommerce-microservices)
 
 The default labs use synthetic aggregate data, create no cloud resources, and contain no production telemetry or personal data.
-
